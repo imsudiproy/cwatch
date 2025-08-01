@@ -28,7 +28,7 @@ fn create_progress_bar(quiet_mode: bool, msg: &str, length: Option<u64>) -> Prog
             }
         }
     };
-    bar.set_message(msg);
+    bar.set_message(msg.to_owned());
     match length.is_some() {
         true => bar
         .set_style(ProgressStyle::default_bar()
